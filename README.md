@@ -1,6 +1,7 @@
 # FusionDN_pytorch
 unofficial implementation FusionDN_pytorch
 
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FLEE-SEON-WOO%2FFusionDN_pytorch&count_bg=%231A0FD9&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 
 This repository is reimplement the code of the following [repo](https://github.com/hanna-xu/FusionDN)<br>
