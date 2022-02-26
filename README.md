@@ -27,8 +27,8 @@ It is a unified model for multiple image fusion tasks, including:<br>
 <div align=center><img src="https://github.com/LEE-SEON-WOO/FusionDN_pytorch/blob/master/imgs/procedure.jpg" width="440" height="290"/></div><br>
 
 Intuitive description of data flow and the process of EWC:<br>
-<div align=center><img src="https://github.com/LEE-SEON-WOO/FusionDN_pytorch/blob/master/imgs/MultiTask.jpg" width="510" height="200"/></div><br>
+<div align=center><img src="https://github.com/LEE-SEON-WOO/FusionDN_pytorch/master/imgs/MultiTask.jpg" width="510" height="200"/></div><br>
 
 ## Fused results:<br>
-<div align=center><img src="https://github.com/LEE-SEON-WOO/FusionDN_pytorch/blob/master/imgs/res1.jpg" width="900" height="490"/></div>
-<div align=center><img src="https://github.com/LEE-SEON-WOO/FusionDN_pytorch/blob/master/imgs/res2.jpg" width="900" height="400"/></div>
+<div align=center><img src="https://github.com/LEE-SEON-WOO/FusionDN_pytorch/master/imgs/res1.jpg" width="900" height="490"/></div>
+<div align=center><img src="https://github.com/LEE-SEON-WOO/FusionDN_pytorch/master/imgs/res2.jpg" width="900" height="400"/></div>
