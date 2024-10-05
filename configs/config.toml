@@ -1,5 +1,5 @@
 [EXP_SETTING]
-IQA_MODEL_PATH = './IQA/models/nr_tid_weighted.model'
+IQA_MODEL_PATH = './pretrained/nr_tid_weighted.pth'
 vis_ir = './datasets/vis_ir_dataset64.h5' #data1_path
 oe_ue = './datasets/oe_ue_Y_dataset64.h5' #data2_path
 far_near = './datasets/far_near_Y_dataset64.h5' #data3_path
@@ -10,7 +10,7 @@ seed = 0
 
 [MODEL]
 LAM = 80000 # 400
-NUM = 40
+NUM = 40 #sample
 EPOCHES = [3, 2, 4]
 BATCH_SIZE = 16
 PATCH_SIZE = 64

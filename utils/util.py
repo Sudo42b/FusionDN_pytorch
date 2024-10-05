@@ -1,6 +1,6 @@
 from collections import defaultdict
 import os
-
+from matplotlib import pyplot as plt
 import torch
 import numpy as np
 
@@ -75,7 +75,8 @@ class ProgressMeter(object):
 
 def load_weights(model:nn.Module, model_path):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    checkpoint = torch.load(model_path, map_location=device)
+    checkpoint = torch.load(model_path, map_location=device,
+                            weights_only=True)
     
     if checkpoint.get('state_dict'):
         model.load_state_dict(checkpoint['state_dict'])
@@ -84,3 +85,14 @@ def load_weights(model:nn.Module, model_path):
     else:
         model.load_state_dict(checkpoint)
     return model
+
+
+def loss_plot(x:dict, epochs:int):
+    for t, v in x.items():
+        plt.plot(list(range(t * epochs, (t + 1) * epochs)), v)
+
+def accuracy_plot(x:dict, num_task:int, epochs:int):
+    for t, v in x.items():
+        plt.plot(list(range(t * epochs, num_task * epochs)), v)
+    plt.ylim(0, 1)
+    

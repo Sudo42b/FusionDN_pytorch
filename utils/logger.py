@@ -48,7 +48,7 @@ class Logger(object):
     def __del__(self):
         self.log_file.close()
 
-    def log(self, values):
+    def log(self, values:dict):
         write_values = []
         for tag in self.header:
             assert tag in values, 'Please give the right value as defined'
