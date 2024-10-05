@@ -127,5 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-datasets/
-test_imgs/
+logs/
+.vscode/
+datasets/*.h5
+test_imgs/oe_ue/
+test_imgs/far_near/

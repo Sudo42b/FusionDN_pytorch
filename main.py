@@ -62,7 +62,7 @@ def train_task(model:nn.Module, dataloader:DataLoader,
                                  prefix='Train: ')
     logger = Logger(path=os.path.join(configs['EXP_SETTING']['log_path'], 
                                 f"{TASK}_{configs['MODEL']['LAM']}"),
-                    header=['epoch', 'ssim', 'perceptual', 'gradient', 'content'],
+                    header=['epoch','iteration','ssim', 'perceptual', 'gradient', 'content'],
                     resume=False)
     ACC, LOSS = {}, {}
     ACC[TASK], LOSS[TASK] = [], []
@@ -108,7 +108,7 @@ def train_task(model:nn.Module, dataloader:DataLoader,
             
             loss_meter.update(loss.item())
             progress_bar.display(idx)
-            logger.log({'epoch':i, 'ssim':ssim_loss.item(), 'perceptual':per_loss.item(),
+            logger.log({'epoch':i,'iteration':f'{idx}/{len(dataloader.dataset)//n_batches}' ,'ssim':ssim_loss.item(), 'perceptual':per_loss.item(),
                         'gradient':grad_loss.item(), 'content':content_loss.item()})
         print(f'epoch: {i} time: {time.time()-start}')
         
