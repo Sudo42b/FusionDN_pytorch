@@ -82,7 +82,7 @@ def EN(inputs, patch_size=16):
     inputs_uint8 = (inputs[:, 0, :, :] * 255).to(torch.uint8) + 1
 
     # Flatten the inputs and compute the histogram
-    inputs_flat = inputs_uint8.view(batch_size, -1)
+    inputs_flat = inputs_uint8.reshape(batch_size, -1)
     counter = torch.stack([torch.bincount(inputs_flat[i], minlength=grey_level).float() for i in range(batch_size)])
 
     # Compute probabilities

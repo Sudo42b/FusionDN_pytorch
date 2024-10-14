@@ -25,7 +25,7 @@ class GradLayer(nn.Module):
         if x.shape[1] == 3:
             #gray_coeffs = [0.3, 0.59, 0.11]
             gray_coeffs = [103.939, 116.779, 123.68]
-            convert = x.new_tensor(gray_coeffs).view(1, 3, 1, 1) / 256
+            convert = x.new_tensor(gray_coeffs).reshape(1, 3, 1, 1) / 256
         else:
             convert = 1.0
         x_gray = x.mul(convert).sum(dim=1)

@@ -36,8 +36,8 @@ class EWC(object):
         for input in self.dataset:
             self.model.zero_grad()
             input = variable(input)
-            output = self.model(input).view(1, -1)
-            label = output.max(1)[1].view(-1)
+            output = self.model(input).reshape(1, -1)
+            label = output.max(1)[1].reshape(-1)
             loss = F.nll_loss(F.log_softmax(output, dim=1), label)
             loss.backward()
 

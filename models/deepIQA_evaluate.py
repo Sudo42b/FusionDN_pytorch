@@ -260,7 +260,7 @@ def EN(inputs: torch.Tensor, patch_size: int = 64):
     
     # Extract patches
     patches = F.unfold(inputs, kernel_size=patch_size, stride=patch_size)
-    patches = patches.view(B, patch_size*patch_size, -1)  # (B, patch_size^2, num_patches)
+    patches = patches.reshape(B, patch_size*patch_size, -1)  # (B, patch_size^2, num_patches)
     # Convert to uint8 (0-255 range)
     patches_uint8 = (patches * 255).to(torch.uint8)
     
